@@ -9,6 +9,12 @@
 </head>
 <body>
     <h1>－皆の掲示板－</h1>
+
+    @foreach($posts as $post)
+        <p><a href="{{ url('/example', $post->id) }}">{{ $post->title }}</a>
+        <a href="{{ url('/example', [$post->id, 'edit']) }}"></a>更新</p>
+    @endforeach
+
     <a href="{{ secure_url('/example/create') }}">投稿</a>
 </body>
 </html>
