@@ -13,6 +13,12 @@
     @foreach($posts as $post)
         <p><a href="{{ url('/example', $post->id) }}">{{ $post->title }}</a>
         <a href="{{ url('/example', [$post->id, 'edit']) }}"></a>更新</p>
+    <form action="{{ url('/example', $post->id) }}" method="POST" onsubmit="if(confirm('削除しても良いですか？')) {return true} else {return false};">
+        @method("delete")
+        @csrf
+        <button type="submit">削除</button>
+    </form>
+
     @endforeach
 
     <a href="{{ secure_url('/example/create') }}">投稿</a>
