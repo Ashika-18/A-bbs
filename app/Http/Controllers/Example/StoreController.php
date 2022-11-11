@@ -11,11 +11,11 @@ class StoreController extends Controller
     public function index(Request $request) {
 
         $request->validate([
-            "name"    => "required",
+            'name'    => 'required',
             "title"   => "required|max:20",
             "content" => "required",
         ], [
-            "name.required"    => "名前は必須です！",
+            'name.required'    => '名前は必須です！',
             "title.required"   => "タイトルは必須です！",
             "title.max"        => "タイトルは20文字で入力して下さい!",
             "content.required" => "コンテンツは必須です！",

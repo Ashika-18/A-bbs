@@ -10,6 +10,8 @@
     @csrf
     <input type="text" name="name" value="{{ old('name') }}">
     <input type="text" name="title" value="{{ old('title') }}">
-    <input type="text" name="content" value="{{ ('content') }}">
+    <input type="text" name="content" value="{{ old('content') }}">
     <input type="submit">
 </form>
+
+<p><a href="/example">TOPへ</a></p>

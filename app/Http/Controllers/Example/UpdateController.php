@@ -9,6 +9,13 @@ use Illuminate\Http\Request;
 class UpdateController extends Controller
 {
     public function index(Request $request, $id) {
+
+        $request->validate([
+            "name"    => "required",
+            "title"   => "required|max:20",
+            "content" => "required",
+        ]);
+
         $post = Post::where("id", $id)->firstOrFail();
         $post->name     = $request->input("name");
         $post->title    = $request->input("title");
