@@ -1,4 +1,4 @@
-<!-- index -->
+<!-- A-bbs_index -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
